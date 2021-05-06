@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Boxes from "./components/Box";
+import Board from "./components/Board";
 
 const App = () => {
   return (
@@ -18,15 +18,7 @@ const App = () => {
           <Route path='/foo' component={Foo} />
           <Route path='/bar' component={Bar} />
         </Switch>
-        <Boxes />
-        <Boxes />
-        <Boxes />
-        <Boxes />
-        <Boxes />
-        <Boxes />
-        <Boxes />
-        <Boxes />
-        <Boxes />
+        <Board />
       </div>
     </Router>
   );

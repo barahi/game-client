@@ -1,12 +1,20 @@
 import {useState} from 'react'
+import './Box.css';
 
-const Boxes = ()=>{
-    const [value,setValue] = useState(" ");     
+const Box = ({boxClick, row, col}) => {
+    const [value, setValue] = useState(" ");
+
+    const clickHandler = (e) => {
+      e.preventDefault();
+      console.log(row, col)
+      setValue(boxClick(row, col));
+    }
+
     return(
-        <div className="boxes">
+        <div className="box" onClick={clickHandler}>
             { value }
         </div>
     )
 }
 
-export default Boxes;
+export default Box;
